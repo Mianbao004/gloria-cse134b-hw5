@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Gloria Lee</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About me</title>
     <style>
-      header, footer {
+      header,
+      main,
+      footer {
         border: 1px solid black;
       }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
+      <h1>About Me!</h1>
       <nav>
         <ul>
           <li><a href="/index.html">Home</a></li>
@@ -24,11 +27,61 @@
       </nav>
     </header>
     <main>
+        <section>
+            <h2>Hello! Let me properly reintroduce myself.</h2>
+            <!--TODO: Update picture-->
+            <img
+            src="/assets/images/another_pic_of_me.png"
+            alt="Another picture of me"
+            width="300"
+            />
+            <span>(21)</span>
+            <aside>
+            <p>
+                My name is Gloria, and I am from California. I am a
+                Mathematics-Computer Science major at the University of California,
+                San Diego (UCSD), and I am eager to re-engage with my academic and
+                professional growth!
+            </p>
+            </aside>
+        </section>
+            <details>
+            <summary>What's been on my mind:</summary>
+            <p>blah blah blah (talk about struggles+reflections+what I look forward to)</p>
+            </details>
 
+            <details>
+            <summary>What have I been up to?</summary>
+            <p>blah blah blah (talk about what I am have been personally and career-wise).</p>
+            </details>
+            <aside>
+                <!--TODO: Could be coding languages in the future-->
+                <h2>Languages:</h2>
+                <label for="korean">Korean:</label>
+                <progress id="korean" value="65" max="100">65%</progress>
+
+                <br>
+
+                <label for="mandarin">Mandarin:</label>
+                <progress id="mandarin" value="30" max="100">30%</progress>
+            </aside>
+
+            <details>
+            <summary>Current Career Goals:</summary>
+            <ol>
+                <li>Be authentic</li>
+                <!--TODO: Add more goals + its descriptions-->
+            </ol>
+            </details>
+
+            <details>
+            <summary>My Current Fixations:</summary>
+            <a href="/interests.html">Click here to see my hobbies</a>
+            </details>
     </main>
     <footer>
-        <!--TODO: Ensure updated is bottom right-->
-        <span><em>Last updated July 13, 2025</em></span>
+      <!--TODO: Ensure updated is bottom right-->
+      <span><em>Last updated July 13, 2025</em></span>
     </footer>
-</body>
+  </body>
 </html>
