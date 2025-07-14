@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Work</title>
     <style>
-      header, footer {
+      header, main, footer {
         border: 1px solid black;
       }
     </style>
@@ -25,6 +25,27 @@
       </nav>
     </header>
     <main>
+        <form action="#" method="get">
+        
+        <fieldset>
+            <legend>Search Bar</legend>
+
+            <label for="project-name">Project Name:</label>
+            <input type="text" id="project-name" name="project-name"><br><br>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option selected="true" disabled="disabled">Select Category</option>
+                <option value="web">Web Development</option>
+                <option value="ai">AI</option>
+                <option value="cloud">Cloud</option>
+            </select><br><br>
+        </fieldset>
+        <br>
+        <input type="submit" value="Search">
+        <input type="reset" value="Reset">
+    </form>
+
     </main>
     <hr>
     <footer>
