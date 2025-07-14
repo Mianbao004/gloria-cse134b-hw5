@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSE134's Lab Page</title>
     <style>
       header, footer {
         border: 1px solid black;
+      }
+      canvas {
+        border: 1px solid #000;
+        margin: 10px 0;
       }
     </style>
 </head>
@@ -26,12 +30,37 @@
     </header>
     <main>
       <iframe src="css-custom-element.html" width="600" height="400" style="border:none;"></iframe>
-
-
+      <br><br>
+      <hello-world></hello-world>
+      
+      <h2>Canvas Demo</h2>
+      <canvas id="canvas_demo" width="300" height="100"></canvas>
     </main>
     <footer>
-        <!--TODO: Ensure updated is bottom right-->
         <span><em>Last updated July 13, 2025</em></span>
     </footer>  
+    
+    <script>
+      class HelloWorld extends HTMLElement {
+        constructor() {
+          super();
+          this.textContent = "Hello World (This is a static HelloWorld custom element)";
+        }
+      }
+      customElements.define('hello-world', HelloWorld);
+      
+      //Draw canavs
+      const canvas = document.getElementById('canvas_demo');
+      const ctx = canvas.getContext('2d');
+      
+      // Draw rectangle shape
+      ctx.fillStyle = '#ff4c4c';
+      ctx.fillRect(10, 10, 50, 50);
+      
+      // Draw some text
+      ctx.font = '14px Arial';
+      ctx.fillStyle = '#6F4E37';
+      ctx.fillText('\u21E6' + ' This is a rectangle', 70, 30);
+    </script>
 </body>
 </html>
