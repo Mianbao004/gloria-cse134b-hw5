@@ -31,8 +31,9 @@
     <main>
       <iframe src="css-custom-element.html" width="600" height="400" style="border:none;"></iframe>
       <br><br>
-      <hello-world></hello-world>
       
+      <hello-world></hello-world>
+
       <h2>Canvas Demo</h2>
       <canvas id="canvas_demo" width="300" height="100"></canvas>
     </main>
@@ -42,12 +43,12 @@
     
     <script>
       class HelloWorld extends HTMLElement {
-        constructor() {
-          super();
-          this.textContent = "Hello World (This is a static HelloWorld custom element)";
+        constructor() { 
+          super(); //Calls parent constructor (HTMLElement) 
+          console.log("Hello World");
         }
       }
-      customElements.define('hello-world', HelloWorld);
+      customElements.define('hello-world', HelloWorld); //TODO: Research why HTMLElement causes error
       
       //Draw canavs
       const canvas = document.getElementById('canvas_demo');
