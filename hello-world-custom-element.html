@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World Custom Element</title>
+</head>
+<body>
+  
+  <!-- Your custom element -->
+  <hello-world></hello-world>
+
+  <script>
+    class HelloWorld extends HTMLElement {
+      constructor() {
+        super();  // TODO: Understand super() 
+        console.log("Hello world!");
+      }
+    }
+
+    // Define the custom element tag
+    customElements.define('hello-world', HelloWorld); // TODO: Understand customElements.define
+  </script>
+  
+</body>
+</html>
