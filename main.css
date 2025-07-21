@@ -261,3 +261,20 @@ iframe {
     aspect-ratio: 16 / 9;
     width: 80%
 }
+
+#pdf-link {
+  display: none; /* Does not show the link when its big */
+}
+
+@media (max-width: 768px) {
+  #pdf-frame {
+    display: none;
+  }                     /* Does not show the embeded <=768px */
+
+  #pdf-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #007BFF;
+    margin-top: 1em;
+  }
+}

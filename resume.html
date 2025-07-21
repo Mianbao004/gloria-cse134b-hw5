@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Resume</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="site-header">
       <nav class="nav-container">
         <ul class="nav-list">
@@ -21,24 +24,41 @@
       </nav>
     </header>
     <main>
-        <section class="index-heading">
-            <h1>My Resume</h1>
-            <p>You can view or download my resume below:</p>
-            <!--TODO: Update resume with projects + work-->
-            <iframe src="assets/pdf/outdated_resume.pdf" type="application/pdf" frameborder="0">
-        </section>
-        <hr>
+      <section class="index-heading">
+        <h1>My Resume</h1>
+        <p>You can view or download my resume below:</p>
+        <!--TODO: Update resume with projects + work-->
+        <embed
+          id="pdf-frame"
+          src="assets/pdf/outdated_resume.pdf"
+          type="application/pdf"
+          width="800"
+          height="700"
+        />
+        <a
+          id="pdf-link"
+          href="https://drive.google.com/file/d/1FJDEYwQlDIjKKqEP35TXGQ7jp_IcfiSf/view?usp=sharing"
+          target="_blank"
+          rel="noopener"
+          >To view my resume</a
+        >
+      </section>
     </main>
+    <hr />
     <footer>
-        <!--TODO: Change email to professional email and update contact info-->
-        <address>
-            Written by Gloria Lee.<br>
-            Email me at <a href="mailto:gloria.y.lee2040@gmail.com">gloria.y.lee2040@gmail.com</a>.<br>
-            Let's connect on LinkedIn! (TODO: Insert LinkedIn url)<br>
-            Visit my website at (TODO: Insert website's url).
-        </address><br>
-        <!--TODO: Ensure updated is bottom right-->
-        <span><em>Last updated July 13, 2025</em></span>
+      <!--TODO: Change email to professional email and update contact info-->
+      <address>
+        Written by Gloria Lee.<br />
+        Email me at
+        <a href="mailto:gloria.y.lee2040@gmail.com"
+          >gloria.y.lee2040@gmail.com</a
+        >.<br />
+        Let's connect on LinkedIn! (TODO: Insert LinkedIn url)<br />
+        Visit my website at (TODO: Insert website's url).
+      </address>
+      <br />
+      <!--TODO: Ensure updated is bottom right-->
+      <span><em>Last updated July 13, 2025</em></span>
     </footer>
-</body>
+  </body>
 </html>

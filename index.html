@@ -42,10 +42,16 @@
         <h2>A little bit about me!</h2>
         <img
           id="image-profile"
-          src="/assets/images/gloria.jpg"
+          src="assets/images/small-me.png"
+          srcset="
+            assets/images/small-me.png 434w,
+            assets/images/medium-me.png 772w,
+            assets/images/large-me.png 869w"
+          sizes="(max-width: 480px) 150px,
+                (max-width: 768px) 200px,
+                (max-width: 1024px) 250px,
+                300px"
           alt="Picture of Gloria Lee"
-          width="300"
-          height="300"
         />
         <p>
           Hi! My name is Gloria and I'm a Mathematics-Computer Science
