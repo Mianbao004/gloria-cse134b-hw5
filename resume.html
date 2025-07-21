@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
-    <style>
-      header, footer {
-        border: 1px solid black;
-      }
-    </style>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>My CV</h1>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/projects.html">Projects</a></li>
-                <li><a href="/resume.html">Resume</a></li>
-                <li><a href="/lab.html">Lab</a></li>
-            </ul>
+    <header class="site-header">
+      <nav class="nav-container">
+        <ul class="nav-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li class="curr_nav"><a href="/resume.html">Resume</a></li>
+        </ul>
       </nav>
     </header>
     <main>
-        <section>
-            <h2>My Resume</h2>
+        <section class="index-heading">
+            <h1>My Resume</h1>
             <p>You can view or download my resume below:</p>
             <!--TODO: Update resume with projects + work-->
             <embed src="assets/pdf/outdated_resume.pdf" type="application/pdf" width="800" height="700">

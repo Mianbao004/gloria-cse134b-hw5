@@ -2,59 +2,86 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--TODO: For the Korean letters-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=3"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nanum+Pen+Script&display=swap"
       rel="stylesheet"
     />
-    <!--Add favicon later with my name-->
+    <!--TODO: Add favicon later with my name-->
     <title>My Homepage</title>
-    <style>
-      header, footer {
-        border: 1px solid black;
-      }
-    </style>
   </head>
   <body>
     <noscript>
-    Your Javascript is disabled. For the site to properly function, you will 
-    need to enable JavaScript in your browser settings.
+      Your Javascript is disabled. For the site to properly function, you will
+      need to enable JavaScript in your browser settings.
     </noscript>
-    <header>
-      <h1>HOME</h1>
+    <header class="site-header">
       <nav>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/about.html">About</a></li>
+        <ul class="nav-list">
+          <li class="curr_nav"><a href="/index.html">Home</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/projects.html">Projects</a></li>
           <li><a href="/resume.html">Resume</a></li>
-          <li><a href="/lab.html">Lab</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section>
-      <h2>Quick Introduction!</h2>
-      <!--TODO: Apply Google font's Jua-->
-      <p>
-        안녕하세요!<br>
-        MY NAME IS <b>GLORIA LEE</b>!
-      </p>
-      <br />
-      <!--TODO: Replace my picture with a professional picture-->
-      <img src="/assets/images/me.png" alt="Me" style="max-width: 25%; height: auto;">
+      <section class="index-heading">
+        <span class="korean-text">안녕하세요!</span>
+        <h1>Welcome to my Homepage!</h1>
       </section>
 
-      <p>
-        These are my current <a href="/interests.html">obessions</a> and
-        <a href="/projects.html">projects</a>!
-      </p>
+      <section class="card-container">
+        <h2>A little bit about me!</h2>
+        <img id="image-profile" src="/assets/images/me.png" alt="Picture of Gloria Lee"/>
+        <p>
+          Hi! My name is Gloria and I'm a Mathematics-Computer Science
+          undergraduate, aspiring enthusiast, and amatuer clay wrangler
+          currently based in sunny San Diego! I love reading dystopian or
+          mystery romance novels, making cute trendy drinks, and is super
+          looking forward to personifying my room with little clay creations! My
+          current goal is get out of my comfort zone and push my career and
+          personal hobbies on a continuous learning and experimenting journey!
+        </p>
+      </section>
+      <details>
+        <summary>What's been on my mind:</summary>
+        <p>blah blah blah (talk about struggles+reflections+what I look forward to)</p>
+      </details>
+
+      <details>
+        <summary>What have I been up to?</summary>
+        <p>blah blah blah (talk about what I am have been personally and career-wise).</p>
+      </details>
+      <aside>
+          <h2>Languages:</h2>
+          <label for="korean">Korean:</label>
+          <progress id="korean" value="65" max="100">65%</progress>
+          <br>
+          <label for="mandarin">Mandarin:</label>
+          <progress id="mandarin" value="30" max="100">30%</progress>
+      </aside>
+      <details>
+      <summary>Current Career Goals:</summary>
+      <ol>
+          <li>Be authentic</li>
+          <!--TODO: Add more goals + its descriptions-->
+      </ol>
+      </details>
+
+      <details>
+      <summary>My Current Fixations:</summary>
+      <a href="/interests.html">Click here to see my hobbies</a>
+      </details>
     </main>
     <footer>
-      <!--TODO: Ensure updated is bottom right-->
-      <span><em>Last updated July 13, 2025</em></span>
+      <span><em>Last updated on July 20, 2025</em></span>
     </footer>
   </body>
 </html>

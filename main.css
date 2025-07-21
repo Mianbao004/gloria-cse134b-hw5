@@ -1,0 +1,129 @@
+:root {
+    --text-primary-color: #2A2A2A;
+    --text-light: rgb(255, 249, 242);
+    --font-main: 'Indie Flower', cursive;
+    --font-korean: 'Nanum Pen Script', cursive;
+    --spacing-unit: 1rem;
+    --bg-color: rgb(255, 249, 242);
+    --bg-secondary-color: white;
+    --header-color: #1675d1;
+    --header-border: #3878B8;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-main), sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--text-primary-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.site-header {
+    background-color: var(--header-color);
+    border: 3px solid var(--header-border);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: calc(var(--spacing-unit) * 1.5) 20px; /* Using spacing unit */
+    gap: var(--spacing-unit); /* Now using your spacing variable */
+}
+
+.nav-list li.curr_nav a {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.nav-list li.curr_nav a:hover {
+    color:#fbe774;
+}
+
+.nav-list li:not(.curr_nav) a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.nav-list li:not(.curr_nav) a:hover {
+    color: #fbe774;
+}
+
+.index-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin: calc(var(--spacing-unit) * 3) 0; /* Using spacing unit */
+}
+
+.korean-text {
+    font-family: var(--font-korean);
+    font-size: 5.5rem; 
+    line-height: 1; 
+    margin-bottom: -0.5rem;
+}
+
+.index-heading h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    padding-top: 0; 
+    letter-spacing: 0.1em;
+}
+
+.card-container {
+    background-color: var(--bg-secondary-color);
+    border-radius: 15px;
+    border: 3px solid var(--header-border);
+    box-shadow: 6px 5px 5px rgba(0, 162, 255, 0.369);
+    width: 80vw;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 2fr; /* COLUMN1: won't shrink past 200px or extend past 1fr; COLUMN2: text takes up 2fr*/
+    grid-template-rows: auto minmax(200px, auto); /* Header row and flexible second row */
+    grid-template-areas: 
+        "header header"
+        "image content";
+}
+
+.card-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary-color);
+    grid-area: header;
+    margin-bottom: 1rem;
+}
+
+#image-profile {
+    width: 100%;                                /* Grid's width and height */
+    height: 100%;
+    max-height: 350px;
+    object-fit: cover;                          /* Scales img */
+    border-radius: 20px;
+    border: 2px solid var(--text-primary-color);
+    grid-area: image;
+}
+
+.card-container p {
+    font-size: 1.45rem;
+    line-height: 2;
+    margin: 0;
+    padding-left: 2rem; /* Space between image and text */
+    grid-area: content;
+}
+
+footer {
+    text-align: right;
+    margin: 1rem 1rem;
+}

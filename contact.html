@@ -4,53 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <title>My Contact</title>
-    <style>
-      header, footer {
-        border: 1px solid black;
-      }
-    </style>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>CONTACTS</h1>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/projects.html">Projects</a></li>
-                <li><a href="/resume.html">Resume</a></li>
-                <li><a href="/lab.html">Lab</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+      <nav class="nav-container">
+        <ul class="nav-list">
+          <li><a href="/index.html">Home</a></li>
+          <li class="curr_nav"><a href="/contact.html">Contact</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/resume.html">Resume</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section>
-        <h2>Send me a message!</h2>
-        <!--TODO: Figure out action attribute form tag-->
-        <form method="GET">
-            <fieldset>
-                <!--TODO: Put required red asterisk-->
-                <legend>* Indicates required fields</legend>
-                <label for="fname">First name*:</label>
-                <input type="text" id="fname" name="fname" placeholder="First name" required><br><br>
+        <section class="index-heading">
+            <h1>Wanna work together? Send me a message!</h1>
+            <!--TODO: Figure out action attribute form tag-->
+            <form method="GET">
+                <fieldset>
+                    <!--TODO: Put required red asterisk-->
+                    <legend>* Indicates required fields</legend>
+                    <label for="fname">First name*:</label>
+                    <input type="text" id="fname" name="fname" placeholder="First name" required><br><br>
 
-                <label for="mname">Middle name:</label>
-                <input type="text" id="mname" name="mname" placeholder="Middle name"><br><br>
+                    <label for="mname">Middle name:</label>
+                    <input type="text" id="mname" name="mname" placeholder="Middle name"><br><br>
 
-                <label for="lname">Last name*:</label>
-                <input type="text" id="lname" name="lname" placeholder="Last name" required><br><br>
+                    <label for="lname">Last name*:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last name" required><br><br>
 
-                <label for="email">Email*:</label>
-                <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+                    <label for="email">Email*:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
 
-                <label for="comment">Comment*:</label>
-                <textarea id="comment" name="comment" placeholder="Type your comment here" rows="5" cols="50" required></textarea><br><br>
+                    <label for="comment">Comment*:</label>
+                    <textarea id="comment" name="comment" placeholder="Type your comment here" rows="5" cols="50" required></textarea><br><br>
 
-                <input type="reset" value="Reset">
-                <input type="submit" value="Submit">
-            </fieldset>
-        </form>
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
         </section>
         <aside>
             <p>TODO: Insert socials as a popup card in aside tag.</p>
