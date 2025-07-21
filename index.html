@@ -39,7 +39,13 @@
 
       <section class="card-container">
         <h2>A little bit about me!</h2>
-        <img id="image-profile" src="/assets/images/me.png" alt="Picture of Gloria Lee"/>
+        <img
+          id="image-profile"
+          src="/assets/images/me.png"
+          alt="Picture of Gloria Lee"
+          width="300"
+          height="300"
+        />
         <p>
           Hi! My name is Gloria and I'm a Mathematics-Computer Science
           undergraduate, aspiring enthusiast, and amatuer clay wrangler
@@ -50,35 +56,52 @@
           personal hobbies on a continuous learning and experimenting journey!
         </p>
       </section>
-      <details>
-        <summary>What's been on my mind:</summary>
-        <p>blah blah blah (talk about struggles+reflections+what I look forward to)</p>
-      </details>
 
-      <details>
-        <summary>What have I been up to?</summary>
-        <p>blah blah blah (talk about what I am have been personally and career-wise).</p>
-      </details>
-      <aside>
-          <h2>Languages:</h2>
-          <label for="korean">Korean:</label>
-          <progress id="korean" value="65" max="100">65%</progress>
-          <br>
-          <label for="mandarin">Mandarin:</label>
-          <progress id="mandarin" value="30" max="100">30%</progress>
-      </aside>
-      <details>
-      <summary>Current Career Goals:</summary>
-      <ol>
-          <li>Be authentic</li>
-          <!--TODO: Add more goals + its descriptions-->
-      </ol>
-      </details>
+      <div class="row-small-containers">
+        <section class="small-container">
+          <h2>My Inner Garden:</h2>
+          <details>
+            <summary>What have I been up to?</summary>
+            <p>
+              blah blah blah (talk about what I am have been personally and
+              career-wise).
+            </p>
+          </details>
+          <details>
+            <summary>What's been on my mind lately...</summary>
+            <p>
+              blah blah blah (talk about struggles+reflections+what I look
+              forward to)
+            </p>
+          </details>
+          <details>
+            <summary>Current Career Goals:</summary>
+            <ol>
+              <li>Be authentic</li>
+              <!--TODO: Add more goals + its descriptions-->
+            </ol>
+          </details>
+          <details>
+            <summary>Chikn Nuggit?</summary>
+            <p>
+              I'm a <strong>BIG</strong> fan! I even got a plushie of her and my
+              fav duo is Fwench Fwy & Iscream ;3
+            </p>
+          </details>
+        </section>
 
-      <details>
-      <summary>My Current Fixations:</summary>
-      <a href="/interests.html">Click here to see my hobbies</a>
-      </details>
+        <section class="small-container">
+          <h2>Other stats:</h2>
+          <label for="lang-korean">Korean:</label>
+          <progress id="lang-korean" value="65" max="100">65%</progress>
+          <br />
+          <label for="lang-mandarin">Mandarin:</label>
+          <progress id="lang-mandarin" value="30" max="100">30%</progress>
+          <br />
+          <label for="lang-indonesian">Indonesian:</label>
+          <progress id="lang-indonesian" value="10" max="100">30%</progress>
+        </section>
+      </div>
     </main>
     <footer>
       <span><em>Last updated on July 20, 2025</em></span>
