@@ -13,7 +13,6 @@ body {
     background-color: var(--bg-color, white);
     font-family: var(--font-main, sans-serif);
     display: flex;
-    justify-content: center;
     flex-direction: column;
     color: var(--text-primary-color, black);
     margin: 0;
@@ -37,7 +36,7 @@ body {
     justify-content: flex-end;
     list-style: none;
     margin: 0;
-    padding: 1.5rem 20px;
+    padding: 1.5rem 1rem;
     gap: 1rem;
 
     li {
@@ -54,9 +53,9 @@ body {
                     transform: translateY(-3px);
                 }
             }
-    }
+        }
 
-    &:not(.curr_nav) {
+        &:not(.curr_nav) {
             a {
                 text-decoration: none;
                 color: var(--text-light, white);
@@ -77,18 +76,30 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 3rem 0; /* Using spacing unit */
+    margin: 3rem 0;
+    /* Using spacing unit */
+
+    form {
+        fieldset {
+            display: flex;
+            flex-direction: column;
+
+            textarea {
+                width: 100%;
+            }
+        }
+    }
 }
 
 .korean-text {
     font-family: var(--font-korean, cursive);
     font-size: 5.5rem;
     line-height: 1;
-    color:red;
+    color: red;
     margin-bottom: -0.5rem;
 }
 
-.korean-text-transform{
+.korean-text-transform {
     font-family: var(--font-korean, cursive);
     font-size: 5.5rem;
     line-height: 1;
@@ -96,6 +107,7 @@ body {
     display: inline-block;
     transition: transform 0.6s ease-in-out;
 }
+
 .korean-text-transform:hover {
     transform: rotate(360deg);
 }
@@ -117,11 +129,13 @@ body {
     padding: 1.5rem;
 
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) 2fr; /* COLUMN1: won't shrink past 200px or extend past 1fr; COLUMN2: text takes up 2fr*/
-    grid-template-rows: auto minmax(200px, auto); /* Header row and flexible second row */
+    grid-template-columns: minmax(200px, 1fr) 2fr;
+    /* COLUMN1: won't shrink past 200px or extend past 1fr; COLUMN2: text takes up 2fr*/
+    grid-template-rows: auto minmax(200px, auto);
+    /* Header row and flexible second row */
     grid-template-areas:
-    "header header"
-    "image content";
+        "header header"
+        "image content";
 }
 
 .card-container h2 {
@@ -133,10 +147,12 @@ body {
 }
 
 #image-profile {
-    width: 100%; /* Grid's width and height */
+    width: 100%;
+    /* Grid's width and height */
     height: 100%;
     max-height: 350px;
-    object-fit: cover; /* Scales img */
+    object-fit: cover;
+    /* Scales img */
     border-radius: 20px;
     border: 2px solid var(--text-primary-color, black);
     grid-area: image;
@@ -146,13 +162,14 @@ body {
     font-size: 1.45rem;
     line-height: 2;
     margin: 0;
-    padding-left: 2rem; /* Space between image and text */
+    padding-left: 2rem;
+    /* Space between image and text */
     grid-area: content;
 }
 
 footer {
-    text-align: right;
-    margin: 1rem 1rem;
+    text-align: left;
+    margin: 1rem 0 0 1rem;
 }
 
 
@@ -166,10 +183,17 @@ footer {
 }
 
 @media (max-width: 650px) {
+
     .row-small-containers {
-    grid-template-columns: 1fr; /* stack small containers once <= 650px */
-    width: 95vw;
-}
+        grid-template-columns: 1fr;
+        /* stack small containers once <= 650px */
+        width: 95vw;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .small-container {
@@ -178,8 +202,10 @@ footer {
     border: 3px solid var(--header-border);
     box-shadow: 6px 5px 5px rgba(0, 162, 255, 0.369);
     padding: 1.5rem;
-    height: 100%; /* Takes full height of grid cell */
-    box-sizing: border-box; /* Includes padding in height calculation */
+    height: 100%;
+    /* Takes full height of grid cell */
+    box-sizing: border-box;
+    /* Includes padding in height calculation */
 }
 
 .small-container h2 {
@@ -191,7 +217,8 @@ footer {
     font-size: 1.45rem;
 }
 
-.small-container, .card-container {
+.small-container,
+.card-container {
     opacity: 0;
     animation-name: fadein;
     animation-duration: 1s;
@@ -201,14 +228,15 @@ footer {
 
 @keyframes fadein {
     0% {
-    opacity: 0;
+        opacity: 0;
     }
+
     100% {
-    opacity: 1;
+        opacity: 1;
     }
 }
 
-#tiger{
+#tiger {
     display: block;
     margin: 0 auto;
 }
@@ -217,9 +245,19 @@ footer {
     a {
         color: var(--text-primary-color, black);
         transition: color 0.3s ease, transform 0.3s ease;
+
         &:hover {
             color: red;
             transform: translateY(-3px);
         }
     }
+}
+
+address {
+  text-align: left;
+}
+
+embed {
+    aspect-ratio: 16 / 9;
+    width: 80%
 }
