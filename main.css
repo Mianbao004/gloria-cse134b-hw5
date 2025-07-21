@@ -278,3 +278,14 @@ iframe {
     margin-top: 1em;
   }
 }
+
+section:has(ol) {
+  background-color: color(display-p3 1 0.7 0.75);
+  border-radius: 15px;
+  text-align: center;
+  max-width: 800px; 
+  margin: 0 auto;    
+  padding: 1rem 2rem; 
+  box-sizing: border-box;
+}
+
