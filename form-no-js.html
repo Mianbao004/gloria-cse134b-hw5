@@ -31,19 +31,35 @@
         <fieldset>
           <legend>Message me!</legend>
           <pre><span style="color: red;">*</span> indicates required fields</pre>
-          <label for="name">Full name<span style="color: red">*</span>:</label>
+          <label for="fname"
+            >First name<span style="color: red">*</span>:</label
+          >
           <input
             type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name here:"
-            pattern="^[a-zA-Z\s]+$"
+            id="fname"
+            name="fname"
+            placeholder="Enter your first name here"
             required
           />
-          <br />
-          <output id="name-error-msg"></output>
-          <output id="name-info-msg"></output>
-
+          <output id="error-message"></output>
+          <output id="info-message"></output>
+          <label for="mname">Middle name:</label>
+          <input
+            type="text"
+            id="mname"
+            name="mname"
+            placeholder="Enter your middle name here"
+          />
+          <label for="lname">Last name<span style="color: red">*</span>:</label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Enter your last name here"
+            required
+          />
+          <output id="error-message"></output>
+          <output id="info-message"></output>
           <label for="email">Email<span style="color: red">*</span>:</label>
           <input
             type="email"
@@ -52,33 +68,27 @@
             placeholder="example@gmail.com"
             required
           />
-          <br />
-          <output id="email-error-msg"></output>
-
+          <output id="error-message"></output>
+          <output id="info-message"></output>
           <label for="comment">Comment<span style="color: red">*</span>:</label>
           <textarea
             id="comment"
             name="comment"
             placeholder="Type your comment here"
             rows="5"
-            minlength="2"
+            required="required"
+            minlength="20"
             maxlength="600"
           ></textarea>
-          <div class="progress-container">
-            <progress id="progress-bar" value="0" max="600"></progress>
-            <br>
-            <p id="remaining-chars"></p>
-          </div>
+          <output id="error-message"></output>
+          <output id="info-message"></output>
 
           <input type="hidden" name="possible_bot" value="true" />
-          <input type="hidden" name="form-errors" id="form-errors" value="">
 
-          <br /><br />
           <button type="reset" value="reset">Reset</button>
           <button type="submit" value="Submit">Submit</button>
         </fieldset>
       </form>
-      <script defer src="script.js"></script>
       <hr />
     </main>
     <footer>
