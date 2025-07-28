@@ -365,7 +365,8 @@ output {
 }
 
 #name-error-msg,
-#email-error-msg{
+#email-error-msg,
+#comment-error-msg{
   border: 1px solid red;
   color: red;
 }

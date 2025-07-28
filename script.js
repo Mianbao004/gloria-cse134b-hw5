@@ -117,6 +117,7 @@ emailInputElement.addEventListener("input", () => {
 
 ////////////////////////////////////////////////////////////////////////////////////
 const commentInputElement = document.getElementById("comment");
+const commentErrorMsg = document.getElementById("comment-error-msg");
 const progressBar = document.getElementById("progress-bar");
 const remChars = document.getElementById("remaining-chars");
 
@@ -143,6 +144,34 @@ function charCounter() {
   }
 }
 
-commentInputElement.addEventListener("input", charCounter);
+commentInputElement.addEventListener("input", () => {
+  commentInputElement.setCustomValidity(""); // clear previous errors
+  let message = "";
+
+  // Validation
+  if (!commentInputElement.validity.valid) {
+    if (commentInputElement.validity.valueMissing) {
+      message = "WARNING! This field cannot be empty.";
+    } else if (commentInputElement.validity.tooShort) {
+      message = `WARNING! Comment must be at least ${commentInputElement.minLength} characters.`;
+    } else if (commentInputElement.validity.tooLong) {
+      message = `WARNING! Comment must be no more than ${commentInputElement.maxLength} characters.`;
+    }
+  }
+
+  commentInputElement.setCustomValidity(message);
+  commentErrorMsg.textContent = message;
+
+  if (message !== "") {
+    commentErrorMsg.style.opacity = 1;
+    addFormError("comment", message);
+    console.log(form_errors);
+
+    setTimeout(() => fadeOut(commentErrorMsg), 2000);
+  }
+
+  charCounter();
+});
+
 
 
