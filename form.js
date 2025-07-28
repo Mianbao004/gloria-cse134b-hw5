@@ -50,21 +50,10 @@ nameInputElement.addEventListener("input", () => {
 
   nameInputElement.setCustomValidity(message);
   nameErrorMsg.textContent = message; //the name-error output
-////////////////////////////////////////////////////////////////////////////////////
   if (message !== "") {
     nameErrorMsg.style.opacity = 1;
     addFormError("name", message);
-    console.log(form_errors);
     // If illegal char
-
-
-
-//ABOVE
-////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
     if (infoMessage !== "") {
       nameInfoMsg.textContent = infoMessage;
       nameInfoMsg.style.opacity = 1;
@@ -106,16 +95,13 @@ emailInputElement.addEventListener("input", () => {
 
   emailInputElement.setCustomValidity(message);
   emailErrorMsg.textContent = message;
-////////////////////////////////////////////////////////////////////////////////////
   emailErrorMsg.style.opacity = 1;
   if (message !== "") {
     addFormError('email', message);
-    console.log(form_errors);
     setTimeout(() => fadeOut(emailErrorMsg), 2000);
   }
 });
 
-////////////////////////////////////////////////////////////////////////////////////
 const commentInputElement = document.getElementById("comment");
 const commentErrorMsg = document.getElementById("comment-error-msg");
 const progressBar = document.getElementById("progress-bar");
@@ -172,6 +158,3 @@ commentInputElement.addEventListener("input", () => {
 
   charCounter();
 });
-
-
-

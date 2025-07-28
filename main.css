@@ -1,12 +1,43 @@
 :root {
-  --text-primary-color: #2a2a2a;
   --text-light: rgb(255, 249, 242);
   --font-main: "Indie Flower", cursive;
   --font-korean: "Nanum Pen Script", cursive;
-  --bg-color: rgb(255, 249, 242);
+  --bg-color: #fff9f2;
+  --text-primary-color: #2a2a2a;
   --bg-secondary-color: white;
   --header-color: #1675d1;
   --header-border: #3878b8;
+  --thememode-color: #070b1d;
+}
+
+.darkmode{
+  --bg-color: #070b1d;
+  --text-primary-color: #7c7979;
+  --thememode-color: #fff9f2;
+}
+
+
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#theme-switch svg{
+  fill: var(--thememode-color);
+}
+#theme-switch svg:last-child{ /* Hide the sun icon*/
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{ /* Hide moon icon */
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
 }
 
 body {
@@ -20,6 +51,55 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
 }
+
+
+/* Dark Mode Styles */
+body.dark {
+  --text-primary-color: rgb(255, 255, 255);
+  --bg-color: rgb(30, 30, 30);
+  --bg-secondary-color: rgb(45, 45, 45);
+  --header-color: rgb(50, 50, 50);
+  --header-border: rgb(80, 80, 80);
+  --text-light: #fbe774;
+}
+
+/* Theme Toggle Styles */
+#theme-toggle {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#theme-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover #theme-icon {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
 
 .site-header {
   background-color: var(--header-color, blue);
