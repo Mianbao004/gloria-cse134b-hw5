@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Contact</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li class="curr_nav"><a href="/contact.html">Contact</a></li>
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/resume.html">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="index-heading">
+        <h1>Want to work together?</h1>
+      </section>
+      <form id="contact-form" action="https://httpbin.org/post" method="POST">
+        <fieldset>
+          <legend>Message me!</legend>
+          <pre><span style="color: red;">*</span> indicates required fields</pre>
+          <label for="name">Full name<span style="color: red">*</span>:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name here:"
+            pattern="^[a-zA-Z\s]+$"
+            required
+          />
+          <br />
+          <output id="name-error-msg"></output>
+          <output id="name-info-msg"></output>
+
+          <label for="email">Email<span style="color: red">*</span>:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+          <br />
+          <output id="email-error-msg"></output>
+
+          <label for="comment">Comment<span style="color: red">*</span>:</label>
+          <textarea
+            id="comment"
+            name="comment"
+            placeholder="Type your comment here"
+            rows="5"
+            minlength="2"
+            maxlength="600"
+            required
+          ></textarea>
+          <div class="progress-container">
+            <progress id="progress-bar" value="0" max="600"></progress>
+            <br>
+            <p id="remaining-chars"></p>
+          </div>
+          <output id="comment-error-msg"></output>
+
+          <input type="hidden" name="possible_bot" value="true" />
+          <input type="hidden" name="form-errors" id="form-errors" value="">
+
+          <br /><br />
+          <button type="reset" value="reset">Reset</button>
+          <button type="submit" value="Submit">Submit</button>
+        </fieldset>
+      </form>
+      <script defer src="script.js"></script>
+      <hr />
+    </main>
+    <footer>
+      <!--TODO: Change email to professional email and update contact info-->
+      <address>
+        Written by Gloria Lee.<br />
+        Email me at
+        <a href="mailto:gloria.y.lee2040@gmail.com"
+          >gloria.y.lee2040@gmail.com</a
+        >.<br />
+        Let's connect on LinkedIn! (TODO: Insert LinkedIn url)<br />
+        Visit my website at (TODO: Insert website's url).
+      </address>
+      <br />
+      <!--TODO: Ensure updated is bottom right-->
+      <span><em>Last updated July 13, 2025</em></span>
+    </footer>
+  </body>
+</html>
