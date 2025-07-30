@@ -10,10 +10,14 @@
   --thememode-color: #070b1d;
 }
 
-.darkmode{
-  --bg-color: #070b1d;
-  --text-primary-color: #7c7979;
-  --thememode-color: #fff9f2;
+/* Dark Mode Styles */
+body.darkmode {
+  --text-primary-color: rgb(255, 255, 255);
+  --bg-color: rgb(30, 30, 30);
+  --bg-secondary-color: rgb(45, 45, 45);
+  --header-color: rgb(50, 50, 50);
+  --header-border: rgb(80, 80, 80);
+  --text-light: #fbe774;
 }
 
 
@@ -42,7 +46,7 @@
 
 body {
   background-color: var(--bg-color, white);
-  font-family: var(--font-main, sans-serif);
+  font-family: var(--font-main, cursive);
   display: flex;
   flex-direction: column;
   color: var(--text-primary-color, black);
@@ -50,17 +54,6 @@ body {
   padding: 0;
   min-height: 100vh;
   min-height: 100dvh;
-}
-
-
-/* Dark Mode Styles */
-body.dark {
-  --text-primary-color: rgb(255, 255, 255);
-  --bg-color: rgb(30, 30, 30);
-  --bg-secondary-color: rgb(45, 45, 45);
-  --header-color: rgb(50, 50, 50);
-  --header-border: rgb(80, 80, 80);
-  --text-light: #fbe774;
 }
 
 /* Theme Toggle Styles */
@@ -253,7 +246,7 @@ nav ul {
   transform: rotate(360deg);
 }
 
-.card-container {
+.container {
   background-color: var(--bg-secondary-color, white);
   border-radius: 15px;
   border: 3px solid var(--header-border, darkblue);
@@ -272,7 +265,7 @@ nav ul {
     "image content";
 }
 
-.card-container h2 {
+.container h2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary-color, black);
@@ -292,7 +285,7 @@ nav ul {
   grid-area: image;
 }
 
-.card-container p {
+.container p {
   font-size: 1.45rem;
   line-height: 2;
   margin: 0;
@@ -322,7 +315,7 @@ footer {
     width: 95vw;
   }
 
-  .card-container {
+  .container {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -359,7 +352,8 @@ footer {
 }
 
 .small-container,
-.card-container {
+.container,
+#icebreaker {
   opacity: 0;
   animation-name: fadein;
   animation-duration: 1s;
