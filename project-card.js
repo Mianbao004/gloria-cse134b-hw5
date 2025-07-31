@@ -33,3 +33,72 @@ class ProjectCard extends HTMLElement {
 
 customElements.define('project-card', ProjectCard);
 // <project-card>
+////////////////////////////////////////////////////////////////////////
+const projectCardContent = [
+      {
+        title: 'FavorHive',
+        image: '/assets/images/FavorHive.png',
+        alt: 'The FavorHive website logo',
+        description: 'FavorHive is a community lending website for users to request and offer help, resources, or services within their neighborhoods',
+        link: 'https://github.com/Mianbao004/FavorHive',
+        status: 'Ongoing'
+    },
+    {
+        title: 'TritonRoute',
+        image: '/assets/images/TritonRoute.png',
+        alt: 'The TritonRoute website logo',
+        description: 'TritonRoute is an informative website designed to help individuals with mobility challenges, identify accessible routes and plan their journeys more easily.',
+        link: 'https://github.com/Mianbao004/TritonRoute',
+        status: 'Completed'
+    }
+]
+////////////////////////////////////////////////////////////////////////
+function renderProjects(projects) {
+  const gallery = document.getElementById('projectGallery');
+    //clear gallery section
+    gallery.innerHTML = '';
+
+
+  projects.forEach((project) => { //light DOM
+    const card = document.createElement('project-card'); //the key
+    card.setAttribute('title', project.title || 'Untitled Project');
+    card.setAttribute('image', project.image || '');
+    card.setAttribute('alt', project.alt || 'Project image');
+    card.setAttribute('description', project.description || 'No description available');
+    card.setAttribute('link', project.link || '#');
+    card.setAttribute('status', project.status || '');
+    
+    gallery.appendChild(card); //add the child(card) to that gallery space
+  });
+}
+////////////////////////////////////////////////////////////////////////
+
+//If localStorage is empty, add the projectCards
+if (!localStorage.getItem("projectCards")) {
+  localStorage.setItem('projectCards', JSON.stringify(projectCardContent));
+}
+// Otherwise, fetch from localStorage with Load Local btn
+document.getElementById("loadLocal").addEventListener("click", () => {
+  const projects = JSON.parse(localStorage.getItem("projectCards")); //Bc the projectCards are stringified
+  renderProjects(projects);
+});
+
+////////////////////////////////////////////////////////////////////////
+const JSONBIN_URL = "https://api.jsonbin.io/v3/b/688ade04ae596e708fbe91cc";
+function loadRemoteProjects() {
+  fetch(JSONBIN_URL)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Fetch failed.");
+      }
+      return response.json();
+    })
+    .then(data => {
+      const projects = data.record;
+      renderProjects(projects); // Render the fetched projects
+    })
+    .catch(error => {
+      console.error("Failed to load remote data:", error);
+    });
+}
+document.getElementById("loadRemote").addEventListener("click", loadRemoteProjects);

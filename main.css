@@ -483,3 +483,14 @@ progress::-moz-progress-bar {
   flex: 1;
   text-align: right;
 }
+
+#localLoad{
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
