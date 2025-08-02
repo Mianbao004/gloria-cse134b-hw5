@@ -9,6 +9,11 @@
   --header-border: #3878b8;
   --thememode-color: #070b1d;
   --linkcolor: #004ea8;
+  --completeStatus: rgb(0, 128, 0, 0.9); 
+  --completeStatusBorder: rgb(0, 113, 0);
+  --incompleteStatus: rgb(133, 133, 133, 0.9);
+  --incompleteStatusBorder: (138, 138, 138);
+  --hoverBtn: rgb(85, 85, 85);
 }
 
 /* Dark Mode Styles */
@@ -16,8 +21,8 @@ body.darkmode {
   --text-primary-color: rgb(255, 255, 255);
   --bg-color: rgb(30, 30, 30);
   --bg-secondary-color: rgb(45, 45, 45);
-  --header-color: rgb(50, 50, 50);
-  --header-border: rgb(80, 80, 80);
+  --header-color: rgb(55, 55, 55);
+  --header-border: rgb(50, 50, 50);
   --text-light: #fbe774;
   --linkcolor: #fbe774;
 }

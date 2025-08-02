@@ -47,13 +47,13 @@ project-card .project-card-content .image-container img {
 }
 
 .status-tag.ongoing {
-  background-color: #858585;
-  border: 2px solid rgb(138, 138, 138);
+  background-color: var(--incompleteStatus, grey);
+  border: 2px solid var(--incompleteStatusBorder, darkgrey);
 }
 
 .status-tag.completed {
-  background-color: green;
-  border: 2px solid rgb(0, 113, 0);
+  background-color: var(--completeStatus, green);
+  border: 2px solid var(--completeStatusBorder, darkgreen);
 }
 
 
@@ -71,7 +71,7 @@ project-card .project-card-content p {
 
 project-card .view-project-btn {
   background-color: var(--header-color, blue);
-  color: white;
+  color: var(--text-light, white);
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
@@ -80,5 +80,5 @@ project-card .view-project-btn {
 }
 
 project-card .view-project-btn:hover {
-  background-color: #aeb8b7;
+  background-color: var(--hoverBtn, grey);
 }
