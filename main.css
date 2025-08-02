@@ -525,3 +525,8 @@ footer a:hover {
   white-space: nowrap;    /* prevent wrapping */
   box-sizing: border-box;
 }
+
+#groceryForm {
+    display: flex;
+    justify-content: center;
+}
