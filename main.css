@@ -176,6 +176,7 @@ nav ul {
 #contact-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
   width: min(90%, 800px);
   margin: 2rem auto;
@@ -486,11 +487,6 @@ progress::-moz-progress-bar {
   text-align: right;
 }
 
-#localLoad{
-  display: flex;
-  justify-content: center;
-}
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -504,4 +500,28 @@ footer a {
 
 footer a:hover {
   color: var(--linkcolor);
+}
+
+#lang-korean, #lang-mandarin, #lang-indonesian {
+  margin-bottom: 2rem;
+}
+
+.formBtn-container {
+  width: 80%;
+  margin: 0 2rem;
+  display: flex;
+  justify-content: space-between; /* evenly spaces buttons across container */
+  gap: 1rem; /* optional: space between buttons */
+}
+
+.formBtn-container button {
+  flex: 0.5;              
+  max-width: 45%;
+  margin: 0;         
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+  border: 2px solid var(--text-primary-color, black);
+  font-family: var(--font-main, cursive);
+  white-space: nowrap;    /* prevent wrapping */
+  box-sizing: border-box;
 }
