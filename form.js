@@ -1,5 +1,9 @@
 let form_errors = [];
 
+let nameFadeTimeoutId;
+let emailFadeTimeoutId;
+let commentFadeTimeoutId;
+
 const nameInputElement = document.getElementById("name");
 const nameErrorMsg = document.getElementById("name-error-msg");
 const nameInfoMsg = document.getElementById("name-info-msg");
@@ -62,15 +66,22 @@ nameInputElement.addEventListener("input", () => {
       nameInfoMsg.style.opacity = 0;
     }
 
-    // Fade both messages (only fades info if it's visible)
+/*     // Fade both messages (only fades info if it's visible)
     setTimeout(() => {
       fadeOut(nameErrorMsg);
       if (infoMessage !== "") {
         fadeOut(nameInfoMsg);
       }
     }, 2000);
-  }
-  
+  } */
+  clearTimeout(nameFadeTimeoutId);
+  nameFadeTimeoutId = setTimeout(() => {
+    fadeOut(nameErrorMsg);
+    if (infoMessage !== "") {
+      fadeOut(nameInfoMsg);
+    }
+  }, 2000);
+}
 });
 
 const emailInputElement = document.getElementById("email");
@@ -98,7 +109,11 @@ emailInputElement.addEventListener("input", () => {
   emailErrorMsg.style.opacity = 1;
   if (message !== "") {
     addFormError('email', message);
-    setTimeout(() => fadeOut(emailErrorMsg), 2000);
+
+    clearTimeout(emailFadeTimeoutId);
+    emailFadeTimeoutId = setTimeout(() => {
+      fadeOut(emailErrorMsg);
+    }, 2000);
   }
 });
 
@@ -153,7 +168,10 @@ commentInputElement.addEventListener("input", () => {
     addFormError("comment", message);
     console.log(form_errors);
 
-    setTimeout(() => fadeOut(commentErrorMsg), 2000);
+    clearTimeout(commentFadeTimeoutId);
+    commentFadeTimeoutId = setTimeout(() => {
+      fadeOut(commentErrorMsg);
+    }, 2000);
   }
 
   charCounter();
