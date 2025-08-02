@@ -51,10 +51,11 @@ function editItem(index) {
     const newItem = prompt("Enter new item name:", groceryList[index].item);
     const newQuantity = prompt("Enter new quantity:", groceryList[index].quantity);
 
-    if ((newItem && newQuantity) && (!isNaN(newQuantity) && parseInt(newQuantity) > 0)) { //Checks if user entered smt && if its is valid
+    if (newItem && newQuantity && !isNaN(newQuantity) && /^[A-Za-z\s]+$/.test(newItem.trim())
+        && parseInt(newQuantity) > 0 && Number.isInteger(Number(newQuantity))) { //Checks if user entered smt && if its is valid
         groceryList[index] = {
             item: newItem.trim(),
-            quantity: parseInt(newQuantity).trim()
+            quantity: parseInt(newQuantity)
         };
         localStorage.setItem('groceryList', JSON.stringify(groceryList));
         renderItems();
